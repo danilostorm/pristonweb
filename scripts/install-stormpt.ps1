@@ -68,7 +68,13 @@ if ($LASTEXITCODE -ne 0) { throw 'Nao foi possivel configurar o caminho do site 
 & $appcmd set apppool /apppool.name:DefaultAppPool /managedRuntimeVersion:v4.0 /managedPipelineMode:Integrated
 if ($LASTEXITCODE -ne 0) { throw 'Nao foi possivel configurar o Application Pool.' }
 
-Start-Service W3SVC -ErrorAction Stop
+if ((Get-Service W3SVC).Status -ne 'Running') { Start-Service W3SVC -ErrorAction Stop }
+
+# Apenas a rede LAN pode acessar HTTP nesta fase; nao habilita HTTPS publico nem TCP 10007.
+$lanRule = 'StormPT IIS HTTP LAN'
+if (-not (Get-NetFirewallRule -DisplayName $lanRule -ErrorAction SilentlyContinue)) {
+  New-NetFirewallRule -DisplayName $lanRule -Direction Inbound -Action Allow -Protocol TCP -LocalPort 80 -RemoteAddress '192.168.30.0/24' | Out-Null
+}
 Write-Host "Site instalado: $WebsitePath"
 Write-Host "Servidor separado: $ServerPath"
 Write-Host 'Teste o site em http://localhost/ depois de executar C:\PristonServer\server.exe'
