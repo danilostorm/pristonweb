@@ -83,6 +83,12 @@ $lanRule = 'StormPT IIS HTTP LAN'
 if (-not (Get-NetFirewallRule -DisplayName $lanRule -ErrorAction SilentlyContinue)) {
   New-NetFirewallRule -DisplayName $lanRule -Direction Inbound -Action Allow -Protocol TCP -LocalPort 80 -RemoteAddress '192.168.30.0/24' | Out-Null
 }
+# Atualiza a apresentacao fullscreen quando houver os arquivos extras deste repositorio.
+$fullScreenScript = Join-Path $PSScriptRoot 'apply-fullscreen-ui.ps1'
+if (Test-Path -LiteralPath $fullScreenScript) {
+  & $fullScreenScript -WebsitePath $WebsitePath
+}
+
 Write-Host "Site instalado: $WebsitePath"
 Write-Host "Servidor separado: $ServerPath"
 Write-Host 'Teste o site em http://localhost/ depois de executar C:\PristonServer\server.exe'
