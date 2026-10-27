@@ -1,0 +1,45 @@
+# StormPT — Priston Tale Web
+
+Implantação do **Priston Tale no navegador** na VM **StormPT** (Windows 11, `192.168.30.238`), hospedada no AEROCOOL.
+
+## Código original
+
+O cliente, os dados e o servidor de jogo vêm de [sungam3d/priston-tale-web](https://github.com/sungam3d/priston-tale-web), mantidos no submódulo `upstream/`, fixado em um commit para instalações reproduzíveis.
+
+O conteúdo do jogo pode ter direitos de terceiros e o projeto original não apresenta uma licença aberta explícita. Por isso, este repositório guarda a configuração de instalação e **referencia** os arquivos originais, em vez de republicar os binários e assets de terceiros.
+
+Para baixar tudo (incluindo os arquivos do jogo):
+```powershell
+git clone --recurse-submodules https://github.com/danilostorm/pristonweb.git
+```
+
+## Instalação
+
+No Windows 11, execute PowerShell **como administrador** a partir da pasta clonada:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install-stormpt.ps1
+```
+
+Esse script habilita IIS / ASP.NET 4.8 / WebSockets, copia somente os arquivos web para `C:\inetpub\priston` e separa o executável e seus dados em `C:\PristonServer`. Configura o `Default Web Site` e mantém a porta TCP 10007 exclusivamente local.
+
+Reinicie o Windows caso os componentes do IIS solicitem e execute o script novamente. Execute `C:\PristonServer\server.exe` e teste em `http://localhost/`.
+
+**Importante:** um servidor acessível remotamente requer HTTPS com certificado válido, um nome DNS e configuração explícita de rede. Não exponha a porta TCP 10007; não publique arquivos da pasta do servidor. Antes de abrir ao público, avalie a segurança do código e do sistema de login. O primeiro login com ID inexistente cria uma conta.
+
+## Operação
+
+- Dados de jogadores: `C:\PristonServer\DataServer` — fazer backup regularmente, fora do repositório.
+- Configurações: `C:\PristonServer\server.ini` (atualmente, 10 jogadores configurados no upstream).
+- Logs e senhas nunca devem ser enviados ao GitHub.
+- Após validar funcionamento, `C:\PristonServer\install_autostart.ps1` configura a inicialização automática como tarefa agendada.
+- O site compartilha o mundo em `server.exe`; o arquivo `config.js` usa `serverUrl: 'ws.ashx'`.
+
+## Diagnóstico
+
+- `http://localhost/ws.ashx` deve responder com HTTP 400 "WebSocket connections only".
+- `http://localhost/?debugnet` exibe o diagnóstico de conexão.
+- Falha de login: verifique `server.exe`, TCP 10007 no host e WebSocket Protocol no IIS.
+- Os navegadores exigem HTTPS para acesso remoto por causa de WebAssembly com threads/SharedArrayBuffer.
+
+Para detalhes do projeto original, consulte [README do upstream](https://github.com/sungam3d/priston-tale-web/blob/main/README.md).
