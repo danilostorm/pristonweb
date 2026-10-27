@@ -53,3 +53,13 @@ O servidor StormPT utiliza gzip no IIS e regras de cache e compressão no Cloudf
 - [Service worker corrigido](overrides/sw.js)
 
 O primeiro acesso ainda pode baixar recursos grandes específicos do mapa. Resultados de login/jogabilidade e medição ponta a ponta dependem de teste em navegador real.
+
+## Interface fullscreen sem launcher
+
+O endereço [stormpt.hoststorm.cloud](https://stormpt.hoststorm.cloud/) abre o cliente em modo janela completa, preservando a proporção original do jogo (4:3) e ocultando ferramentas de desenvolvedor. O carregamento inicial permanece visível em um indicador pequeno para não simular um jogo travado. Use `?debug=1` no URL para abrir logs e controles.
+
+- [CSS responsivo](overrides/stormpt-ui.css)
+- [Script de implantação idempotente](scripts/apply-fullscreen-ui.ps1)
+- [Análise comparativa com OldPT e limites de desempenho](docs/analise-oldpt-e-interface-2026-10-27.md)
+
+**Nota:** o projeto OldPT observado utiliza Three.js, WebGL e protocolo WebSocket próprio. A mudança de interface não transforma o cliente WebAssembly do StormPT em um novo engine WebGL nem elimina o download obrigatório dos recursos necessários ao mapa.
