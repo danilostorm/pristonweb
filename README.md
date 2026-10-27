@@ -43,3 +43,13 @@ Reinicie o Windows caso os componentes do IIS solicitem e execute o script novam
 - Os navegadores exigem HTTPS para acesso remoto por causa de WebAssembly com threads/SharedArrayBuffer.
 
 Para detalhes do projeto original, consulte [README do upstream](https://github.com/sungam3d/priston-tale-web/blob/main/README.md).
+
+## Desempenho / carregamento no mapa
+
+O servidor StormPT utiliza gzip no IIS e regras de cache e compressão no Cloudflare restritas a `stormpt.hoststorm.cloud`. O pacote inicial passou de cerca de 91 MB para 51 MB pela CDN e parte dos cenários/modelos reduz até 73% de transferência sem alterar os dados originais.
+
+- [Relatório da otimização e resultados reais](docs/otimizacao-carregamento-2026-10-27.md)
+- [Script de otimização do IIS](scripts/optimize-loading.ps1)
+- [Service worker corrigido](overrides/sw.js)
+
+O primeiro acesso ainda pode baixar recursos grandes específicos do mapa. Resultados de login/jogabilidade e medição ponta a ponta dependem de teste em navegador real.
