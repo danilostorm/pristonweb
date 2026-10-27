@@ -52,6 +52,14 @@ foreach ($name in $siteFiles) {
     throw "Arquivo do site ausente: $name"
   }
 }
+# Reaplica as correcoes locais depois de copiar os arquivos do upstream.
+$overrideDir = Join-Path (Split-Path -Parent $PSScriptRoot) 'overrides'
+$serviceWorkerOverride = Join-Path $overrideDir 'sw.js'
+if (Test-Path -LiteralPath $serviceWorkerOverride) {
+  Copy-Item -LiteralPath $serviceWorkerOverride -Destination (Join-Path $WebsitePath 'sw.js') -Force
+  Write-Host 'Service worker otimizado restaurado.'
+}
+
 Write-Host 'Copiando dados do jogo (operacao longa)...'
 & robocopy.exe (Join-Path $source 'data') (Join-Path $WebsitePath 'data') /E /R:2 /W:2 /NFL /NDL /NP
 if ($LASTEXITCODE -ge 8) { throw "Erro robocopy dados: $LASTEXITCODE" }
