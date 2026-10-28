@@ -1,0 +1,26 @@
+# Recursos originais e derivados proprietários
+Cliente/
+Source/
+original/
+public/pt-assets/
+dist/
+dist-pages/
+*.pack
+*.smd
+*.smb
+*.inx
+*.wasm
+
+# Dados e credenciais
+*.env
+.env*
+*.pw
+DataServer/
+GameServer/
+backups/
+*.log
+
+# Dependências e temporários
+node_modules/
+*.zip
+*.7z
