@@ -1,4 +1,3 @@
-Atualização do launcher|29/10/2026|Nova interface StormPT com atualizações verificadas.
-Instrutora Amanda|29/10/2026|Presente em Ricarten e Pillai. Missões em desenvolvimento.
-Novos personagens|29/10/2026|Agora começam no nível 1. Boas aventuras!
-Tutorial iniciante|29/10/2026|Texto do mascote dos níveis 1 a 10 corrigido para melhor leitura.
+Progressão inicial|29/10/2026|Novos personagens iniciam sem evoluções e quests concluídas antecipadamente.
+Instrutora Amanda|29/10/2026|Amanda usa agora o sistema original de sete missões para iniciantes.
+Tutorial do mascote|29/10/2026|O texto do mascote dos níveis 1 a 10 ganhou melhor contraste.
