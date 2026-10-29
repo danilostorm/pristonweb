@@ -1,0 +1,3 @@
+VERSION|0.2.1
+FILE|launcher.exe|24576|d5cfaa33e5df2202311d881f7688a1d13a4e7c556069562bc66a69e275e06be2|files/launcher.exe
+ARCHIVE|Game.exe|5680640|f865f27126b0b6c56ae957832058f276d897d7739e915070ee6c59b84c47f69d|1730891|b37ada8bb0a88288c5634e685e2287feac0ff7ce9ba06c07ab19218dfa14e309|files/patch.part00,files/patch.part01,files/patch.part02
