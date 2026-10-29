@@ -6,7 +6,7 @@ $expectedZip = 'B37ADA8BB0A88288C5634E685E2287FEAC0FF7CE9BA06C07AB19218DFA14E309
 $expectedGame = 'F865F27126B0B6C56AE957832058F276D897D7739E915070EE6C59B84C47F69D'
 $baseUrl = 'https://raw.githubusercontent.com/danilostorm/pristonweb/stormpt-launcher-v0.1.0/launcher/patches/'
 $filename = 'StormPT-Cliente-Porta1997-20261029.zip'
-$parts = @($filename+'.part00',$filename+'.part01',$filename+'.part02')
+$parts = @(($filename + '.part00'), ($filename + '.part01'), ($filename + '.part02'))
 if (!(Test-Path (Join-Path $GameFolder 'Game.exe'))) {
   $GameFolder = Read-Host 'Informe o caminho completo da pasta que contem Game.exe'
 }
