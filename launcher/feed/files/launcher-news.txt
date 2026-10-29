@@ -1,3 +1,1 @@
-Progressão inicial|29/10/2026|Novos personagens iniciam sem evoluções e quests concluídas antecipadamente.
-Instrutora Amanda|29/10/2026|Amanda usa agora o sistema original de sete missões para iniciantes.
-Tutorial do mascote|29/10/2026|O texto do mascote dos níveis 1 a 10 ganhou melhor contraste.
+Chuva no StormPT|29/10/2026|Chuva ativada por padrao. Cada jogador pode desativar em Configuracoes > Video > Chuva, e Salvar.

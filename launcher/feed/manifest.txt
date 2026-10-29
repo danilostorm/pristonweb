@@ -1,5 +1,5 @@
-VERSION|0.3.3
+VERSION|0.3.4
 FILE|launcher.exe|33280|ff3b03eba5dc683ff36ffa4b5e61f13566c1286df4e7034e73d9cc084a1217e1|files/launcher.exe
 ARCHIVE|launcher-background.png|2953877|f62b35428f71de5186170acfb84a8fd7762dc6071d8599a545f8113f3e3b93a9|2954073|c152220cd05953b01fb20d30b8dff171a3b4494bd7aab5637cb532277b3d85bf|files/bg.part00,files/bg.part01,files/bg.part02,files/bg.part03,files/bg.part04,files/bg.part05,files/bg.part06,files/bg.part07,files/bg.part08,files/bg.part09,files/bg.part10,files/bg.part11,files/bg.part12,files/bg.part13,files/bg.part14,files/bg.part15,files/bg.part16,files/bg.part17,files/bg.part18,files/bg.part19,files/bg.part20,files/bg.part21,files/bg.part22,files/bg.part23,files/bg.part24,files/bg.part25,files/bg.part26,files/bg.part27,files/bg.part28,files/bg.part29,files/bg.part30,files/bg.part31,files/bg.part32,files/bg.part33,files/bg.part34,files/bg.part35,files/bg.part36,files/bg.part37,files/bg.part38,files/bg.part39,files/bg.part40,files/bg.part41,files/bg.part42,files/bg.part43,files/bg.part44,files/bg.part45
-FILE|launcher-news.txt|304|2325d7ece1bfc7f02fd99f88d652035ece73740d233acc028eb3cdd3852c4dfa|files/launcher-news.txt
-ARCHIVE|Game.exe|5680640|e5aa45e793e0c37876c18bebadb605e3d95a85b038e8967ac0cf46e6dca864b3|1720773|f2f9061b28255e9c3206dcfca5a7aab22224fd05335edde14df2b3cb79e1c3fb|files/questfix.part00,files/questfix.part01,files/questfix.part02
+FILE|launcher-news.txt|126|b8b7cdeb618b69fa2b2ee93ff9d7d926ecefe5ee4165770fd75b01e56899ad6f|files/launcher-news.txt
+ARCHIVE|Game.exe|5681664|789518c18364c3fbc96d2b1d415a26e43d4065aad501d753ca7f399b440b430c|1721149|1b5e3e75b0c7f458bb4bf5fd4107292400aad59cf085429c8adf3d840c8415f7|files/rain.part00,files/rain.part01,files/rain.part02
