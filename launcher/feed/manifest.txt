@@ -1,5 +1,7 @@
-VERSION|0.3.4
+VERSION|0.3.5
 FILE|launcher.exe|33280|ff3b03eba5dc683ff36ffa4b5e61f13566c1286df4e7034e73d9cc084a1217e1|files/launcher.exe
 ARCHIVE|launcher-background.png|2953877|f62b35428f71de5186170acfb84a8fd7762dc6071d8599a545f8113f3e3b93a9|2954073|c152220cd05953b01fb20d30b8dff171a3b4494bd7aab5637cb532277b3d85bf|files/bg.part00,files/bg.part01,files/bg.part02,files/bg.part03,files/bg.part04,files/bg.part05,files/bg.part06,files/bg.part07,files/bg.part08,files/bg.part09,files/bg.part10,files/bg.part11,files/bg.part12,files/bg.part13,files/bg.part14,files/bg.part15,files/bg.part16,files/bg.part17,files/bg.part18,files/bg.part19,files/bg.part20,files/bg.part21,files/bg.part22,files/bg.part23,files/bg.part24,files/bg.part25,files/bg.part26,files/bg.part27,files/bg.part28,files/bg.part29,files/bg.part30,files/bg.part31,files/bg.part32,files/bg.part33,files/bg.part34,files/bg.part35,files/bg.part36,files/bg.part37,files/bg.part38,files/bg.part39,files/bg.part40,files/bg.part41,files/bg.part42,files/bg.part43,files/bg.part44,files/bg.part45
-FILE|launcher-news.txt|126|b8b7cdeb618b69fa2b2ee93ff9d7d926ecefe5ee4165770fd75b01e56899ad6f|files/launcher-news.txt
-ARCHIVE|Game.exe|5681664|789518c18364c3fbc96d2b1d415a26e43d4065aad501d753ca7f399b440b430c|1721149|1b5e3e75b0c7f458bb4bf5fd4107292400aad59cf085429c8adf3d840c8415f7|files/rain.part00,files/rain.part01,files/rain.part02
+FILE|launcher-news.txt|234|95b7ffdb22cf4cca34815cf39ea2a28feafe1209ff8a5ace0e39591f24af450a|files/launcher-news.txt
+ARCHIVE|Game.exe|5684736|b1f310486d472c4d2fff906796903d298bdde9ef16c99d4d1f7cc67e18478be9|1722256|c076cb43a2b536b28db7c46c9d2d4edb94e28cd6434c7cc08663e461172ee926|files/weather.part00,files/weather.part01,files/weather.part02
+FILE|game/settings/climate.png|1879|24c1d06668c269f792576ee2f37afa4d4c6706002ec8eb8341e984d541b9499d|files/climate.png
+FILE|game/settings/climate_.png|2002|5362c5c7f6e41289a7cf8c6f8edeb0bf5bff0986445b166450b74e74ce36b198|files/climate_.png
