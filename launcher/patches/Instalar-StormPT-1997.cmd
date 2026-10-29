@@ -11,7 +11,7 @@ echo verifica os arquivos e cria backup do Game.exe.
 echo Feche o jogo antes de continuar.
 echo.
 set "BOOTFILE=%TEMP%\StormPT-Install-1997-%RANDOM%.ps1"
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/danilostorm/pristonweb/stormpt-launcher-v0.1.0/launcher/patches/Instalar-StormPT-1997.ps1' -OutFile '%BOOTFILE%' -UseBasicParsing"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/danilostorm/pristonweb/1e25acc815055a5dea3be90bfd9a112cf16d05f5/launcher/patches/Instalar-StormPT-1997.ps1' -OutFile '%BOOTFILE%' -UseBasicParsing"
 if errorlevel 1 (
   echo FALHA: nao foi possivel baixar o instalador do GitHub.
   if exist "%BOOTFILE%" del "%BOOTFILE%"
