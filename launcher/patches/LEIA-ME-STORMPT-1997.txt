@@ -1,0 +1,17 @@
+STORMPT PATCH - 29/10/2026 (TESTE)
+
+Game.exe e Server33.exe foram compilados para usar a porta publica 1997.
+O servidor atualizado foi instalado na VM Games. Backup preservado.
+
+PARA INSTALAR NO COMPUTADOR:
+1) Baixe estes arquivos para a pasta do Game.exe: Instalar-StormPT-1997.ps1 e Instalar-StormPT-1997.cmd.
+2) Abra o CMD. Ele baixa as 3 partes do ZIP do GitHub, confere SHA256, faz backup do Game.exe e do Settings.ini, instala o Game.exe novo e configura IP/PORT.
+3) Alternativamente, baixe tambem as tres partes .part00/.part01/.part02, deixe na mesma pasta que o CMD e execute: nao sera necessario baixar as partes novamente.
+4) Se der erro antes de concluir, o instalador tenta rollback automatico.
+5) Teste login, entrada na cidade e persistencia do personagem apos reconectar.
+
+NAO ALTERA contas SQL, dados dos personagens ou NPCs.
+O launcher remoto ainda nao tem feed publico ativo; este instalador e um patch de teste.
+
+ZIP SHA256: B37ADA8BB0A88288C5634E685E2287FEAC0FF7CE9BA06C07AB19218DFA14E309
+Game.exe SHA256: F865F27126B0B6C56AE957832058F276D897D7739E915070EE6C59B84C47F69D
