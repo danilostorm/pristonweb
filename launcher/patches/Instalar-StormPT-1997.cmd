@@ -18,7 +18,7 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%BOOTFILE%" -GameFolder "%~dp0"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%BOOTFILE%" -GameFolder "%~dp0."
 set "RESULTADO=%ERRORLEVEL%"
 del "%BOOTFILE%" >nul 2>&1
 if not "%RESULTADO%"=="0" (
