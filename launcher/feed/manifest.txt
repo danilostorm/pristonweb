@@ -1,5 +1,5 @@
-VERSION|0.3.1
+VERSION|0.3.2
 FILE|launcher.exe|33280|ff3b03eba5dc683ff36ffa4b5e61f13566c1286df4e7034e73d9cc084a1217e1|files/launcher.exe
 ARCHIVE|launcher-background.png|2953877|f62b35428f71de5186170acfb84a8fd7762dc6071d8599a545f8113f3e3b93a9|2954073|c152220cd05953b01fb20d30b8dff171a3b4494bd7aab5637cb532277b3d85bf|files/bg.part00,files/bg.part01,files/bg.part02,files/bg.part03,files/bg.part04,files/bg.part05,files/bg.part06,files/bg.part07,files/bg.part08,files/bg.part09,files/bg.part10,files/bg.part11,files/bg.part12,files/bg.part13,files/bg.part14,files/bg.part15,files/bg.part16,files/bg.part17,files/bg.part18,files/bg.part19,files/bg.part20,files/bg.part21,files/bg.part22,files/bg.part23,files/bg.part24,files/bg.part25,files/bg.part26,files/bg.part27,files/bg.part28,files/bg.part29,files/bg.part30,files/bg.part31,files/bg.part32,files/bg.part33,files/bg.part34,files/bg.part35,files/bg.part36,files/bg.part37,files/bg.part38,files/bg.part39,files/bg.part40,files/bg.part41,files/bg.part42,files/bg.part43,files/bg.part44,files/bg.part45
-FILE|launcher-news.txt|254|078dded3c773479bf207a388c268baaa732151727f08bf3c9ea3405427b0b752|files/launcher-news.txt
-ARCHIVE|Game.exe|5680640|f865f27126b0b6c56ae957832058f276d897d7739e915070ee6c59b84c47f69d|1730891|b37ada8bb0a88288c5634e685e2287feac0ff7ce9ba06c07ab19218dfa14e309|files/patch.part00,files/patch.part01,files/patch.part02
+FILE|launcher-news.txt|351|8432ca83a1b971a845e9f2e1ffae5078ab60c4c5a45f0cf6f3f6576d201bbff2|files/launcher-news.txt
+ARCHIVE|Game.exe|5680640|cc542d7a2857a1ed8ea1c2eb356e3fe8361c19a60a8352fb13a22cc05bc56de1|1720803|68609e2aa455b487786b105c09e80110a2bcf3b36f258eb311ca7f23a957ef06|files/petfix.part00,files/petfix.part01,files/petfix.part02
