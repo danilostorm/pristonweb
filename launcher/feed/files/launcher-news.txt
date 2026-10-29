@@ -1,2 +1,3 @@
 Chuva no StormPT|29/10/2026|Chuva ativada por padrao. Cada jogador pode desativar em Configuracoes > Video > Chuva, e Salvar.
 Clima e tempestades|29/10/2026|Nova aba Clima: chuva e tempestades, controle separado para raios e trovoes.
+Boss Time|29/10/2026|Contagem regressiva real para proximo horario de boss, atualizada pelo servidor. Anuncios globais 5 min, 1 min e nascimento.
