@@ -1,0 +1,14 @@
+Loja, montarias e baus|05/11/2026|Nova loja com previa 3D, menus junto ao minimapa e baus adicionais. Correcao da desconexao causada pelo HP dos bonus de montaria.
+Cursor e janelas de NPC|03/11/2026|Cursor do Priston acima do chat. Cliques e arraste entre inventario e paineis de NPC corrigidos em diferentes resolucoes.
+Interface, mapas e itens|03/11/2026|Chat movel, inventario revisado, mapas detalhados e mapa-mundi com niveis StormPT. Correcoes das pocoes Girafa/Natal, bonus de ataque, capacidade de peso e rejeicao de aging.
+Equipamentos e minimapa|03/11/2026|Bonus dos equipamentos apenas montado. Tecla M amplia ou reduz o minimapa. Correcoes de login, Loja VIP, pocoes especiais de mana, peso, aging e restauracao.
+Estabulo e montarias|01/11/2026|Abra o estabulo pelo botao ao lado do minimapa. Nove montarias livres para todos e dezessete para VIP ativo, sem bonus de velocidade.
+Nova entrada e personagens|01/11/2026|Contas salvas opcionais, selecao com personagem central e rotacao, criacao com classes, aparencias e nome na mesma tela.
+Abertura pelo launcher|01/11/2026|Cliente publico verifica atualizacoes pelo launcher. Janela StormPT e abertura sem a tela antiga do Elemental.
+Etiquetas e permissoes de drop|01/11/2026|Dono e tempo no chao, aviso de drop raro, compartilhamento com grupo, clan e lista. Protecao de30 segundos para novos drops; depois ficam publicos.
+Indicadores ativos dourados|01/11/2026|F11: opcoes ligadas e aba selecionada destacadas em amarelo, inclusive no tema Default.
+Novo menu F11|01/11/2026|Configuracoes reunidas no F11; F8 livre do painel. Video, audio, jogo, tema, idioma, atalhos, camera, balao e chat.
+Filtro e marcador de drop|01/11/2026|Filtro por categoria e especialidade, marcacoes coloridas por item e catalogo visual.
+Chuva no StormPT|29/10/2026|Chuva ativada por padrao. Cada jogador pode desativar em Configuracoes > Video > Chuva, e Salvar.
+Clima e tempestades|29/10/2026|Nova aba Clima: chuva e tempestades, controle separado para raios e trovoes.
+Boss Time|29/10/2026|Contagem regressiva real para proximo horario de boss, atualizada pelo servidor. Anuncios globais 5 min, 1 min e nascimento.
