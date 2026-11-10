@@ -66,6 +66,15 @@ test("login e personagens de LAB renderizam sem persistir credenciais", async ()
     if (path === "/v1/characters") return json({ username: "TEST1", characters: [
       { name: "<invalid html> Knight", classCode: 1, className: "Fighter", level: 42 },
     ] });
+    if (path === "/v1/characters/reserve") {
+      assert.equal(JSON.parse(init.body).name, "<invalid html> Knight");
+      return json({ name: "<invalid html> Knight", expiresInSeconds: 90,
+        worldAccessGranted: false });
+    }
+    if (path === "/v1/characters/release") {
+      assert.equal(JSON.parse(init.body).name, "<invalid html> Knight");
+      return new Response(null, { status: 204 });
+    }
     if (path === "/v1/logout") return new Response(null, { status: 204 });
     throw new Error("unexpected route");
   };
@@ -85,6 +94,14 @@ test("login e personagens de LAB renderizam sem persistir credenciais", async ()
                "character treated as textContent");
   assert.equal(nodes.get("account-title").textContent, "Conta: TEST1");
   assert.equal(requests.some(x => x.path === "/v1/sessions"), true);
+
+  const reserveButton = character.children[2];
+  assert.equal(reserveButton.textContent, "Reservar");
+  await reserveButton.emit("click");
+  assert.equal(reserveButton.textContent, "Liberar");
+  assert.match(nodes.get("status").textContent, /entrada no mundo ainda não existe/);
+  await reserveButton.emit("click");
+  assert.equal(reserveButton.textContent, "Reservar");
 
   await nodes.get("logout-button").emit("click");
   assert.equal(nodes.get("login-view").hidden, false);
