@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'self'" />
+  <title>StormPT Web · Laboratório</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="mark" aria-hidden="true">S</div>
+      <div>
+        <p class="eyebrow">HostStorm · Ambiente de desenvolvimento</p>
+        <h1>StormPT <span>Web</span></h1>
+      </div>
+      <span class="lab-tag">LAB • TESTE</span>
+    </header>
+    <div class="layout">
+      <section class="hero" aria-labelledby="welcome">
+        <p class="kicker">TRÊS PLATAFORMAS. UM MUNDO.</p>
+        <h2 id="welcome">Seu mundo.<br/><span>Onde você estiver.</span></h2>
+        <p>Estamos preparando o StormPT para Desktop, Web e Android usando a mesma identidade e os mesmos personagens.</p>
+        <div class="platforms" aria-label="Plataformas do projeto">
+          <div><span aria-hidden="true">▣</span> Desktop</div>
+          <div><span aria-hidden="true">◇</span> Web</div>
+          <div><span aria-hidden="true">▯</span> Mobile</div>
+        </div>
+        <p class="notice">Esta página é um protótipo separado do jogo. Não permite entrar no mapa ou jogar e não conecta contas reais enquanto o LAB não estiver isolado.</p>
+      </section>
+      <section class="panel" aria-label="Conta e personagens">
+        <div id="login-view">
+          <p class="panel-label">ACESSO DE TESTE</p>
+          <h2>Entrar no laboratório</h2>
+          <p class="help">Somente contas descartáveis de LAB quando a API segura estiver habilitada.</p>
+          <form id="login-form" autocomplete="on">
+            <label for="username">ID da conta</label>
+            <input id="username" type="text" name="username" autocomplete="username" autocapitalize="off" spellcheck="false" minlength="1" maxlength="32" required />
+            <label for="password">Senha</label>
+            <input id="password" type="password" name="password" autocomplete="current-password" minlength="1" maxlength="32" required />
+            <button id="login-button" type="submit">Entrar no LAB</button>
+          </form>
+          <p class="footnote">O Gateway permanece fechado por padrão e exige HTTPS para conexões externas.</p>
+        </div>
+        <div id="characters-view" hidden>
+          <p class="panel-label">PERSONAGENS • LAB</p>
+          <h2 id="account-title">Sua conta</h2>
+          <p class="help">Personagens associados à sua sessão autenticada.</p>
+          <ul id="character-list" class="character-list"></ul>
+          <p id="empty-list" class="help" hidden>Nenhum personagem disponível nesta conta de teste.</p>
+          <p class="footnote">A entrada no mapa ainda não está implementada.</p>
+          <button type="button" id="logout-button" class="secondary">Sair da conta</button>
+        </div>
+        <p id="status" role="status" aria-live="polite" class="status">Gateway de laboratório: conexão não verificada.</p>
+      </section>
+    </div>
+    <footer>STORMPT MULTIPLATAFORMA — Protótipo de autenticação. Sem alterações nos servidores de produção.</footer>
+  </main>
+</body>
+</html>

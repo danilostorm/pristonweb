@@ -1,0 +1,32 @@
+name: StormPT Web - LAB login prototype
+
+on:
+  push:
+    branches:
+      - lab/gateway-login-prototype-20261110
+    paths:
+      - 'web-lab/**'
+      - '.github/workflows/test-web-lab.yml'
+  pull_request:
+    paths:
+      - 'web-lab/**'
+      - '.github/workflows/test-web-lab.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-ui-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JS module syntax
+        run: |
+          node --check web-lab/app.mjs
+          node --check web-lab/vendor/StormPTGatewayClient.mjs
+      - name: Test SDK and page with synthetic data
+        run: node --test web-lab/tests/*.test.mjs
