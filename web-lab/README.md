@@ -8,11 +8,12 @@ Este protótipo foi criado em uma branch de laboratório para evitar alterar o c
 
 - Página responsiva em PT-BR.
 - Login por `POST /v1/sessions` do Gateway, sem armazenamento local de senhas ou tokens.
+- Botões **Reservar** / **Liberar** na lista de personagens: criam uma reserva exclusiva de 90 segundos; uma segunda sessão recebe HTTP 409. Nenhuma reserva concede acesso ao mundo.
 - Identidade via `/v1/me`, lista de personagens via `/v1/characters` e logout.
 - O Gateway deve estar no mesmo domínio, encaminhado por HTTPS; o navegador não acessa SQL Server nem uma origem externa HTTP.
 - O formulário é desabilitado se `/health` informar `realLoginConfigured=false` ou o serviço não estiver disponível.
 - A listagem usa `textContent`, não insere nomes de personagens como HTML.
-- Não cria contas, não entra no mapa, não implementa combate, inventário nem multiplayer.
+- Não cria contas, não entra no mapa, não implementa combate, inventário nem multiplayer. A reserva não sincroniza o cliente Desktop nem o servidor do jogo.
 
 ## Visualizar somente a interface local
 
