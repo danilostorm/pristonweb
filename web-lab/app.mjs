@@ -13,6 +13,8 @@ const characterList = document.getElementById("character-list");
 const emptyList = document.getElementById("empty-list");
 
 let gateway = null;
+let reservedCharacter = null;
+let reservationButtons = [];
 
 function status(message, kind = "info") {
   statusNode.textContent = message;
@@ -29,10 +31,20 @@ function loginScreen() {
   charactersView.hidden = true;
   accountTitle.textContent = "Sua conta";
   characterList.replaceChildren();
+  reservedCharacter = null;
+  reservationButtons = [];
+}
+
+function updateReservationButtons() {
+  for (const { name, button } of reservationButtons) {
+    button.disabled = !!reservedCharacter && reservedCharacter !== name;
+    button.textContent = reservedCharacter === name ? "Liberar" : "Reservar";
+  }
 }
 
 function renderCharacters(username, characters) {
   characterList.replaceChildren();
+  reservationButtons = [];
   for (const character of characters) {
     const item = document.createElement("li");
     const details = document.createElement("div");
@@ -44,9 +56,42 @@ function renderCharacters(username, characters) {
     level.className = "level";
     level.textContent = "Nível " + character.level;
     details.append(name, role);
-    item.append(details, level);
+    const action = document.createElement("button");
+    action.type = "button";
+    action.className = "char-action";
+    action.textContent = "Reservar";
+    action.setAttribute?.("aria-label", "Reservar personagem " + character.name);
+    action.addEventListener("click", async () => {
+      if (!gateway || action.disabled) return;
+      const same = reservedCharacter === character.name;
+      action.disabled = true;
+      try {
+        if (same) {
+          await gateway.releaseCharacter(character.name);
+          reservedCharacter = null;
+          status("Reserva liberada. O personagem permanece fora do mapa.", "ok");
+        } else {
+          const lease = await gateway.reserveCharacter(character.name);
+          if (lease.worldAccessGranted !== false) throw new Error("Invalid lease.");
+          reservedCharacter = character.name;
+          status("Personagem reservado por " + lease.expiresInSeconds +
+                 " segundos. A entrada no mundo ainda não existe.", "ok");
+        }
+      } catch (error) {
+        if (same && error instanceof StormPTGatewayError && error.status === 409)
+          reservedCharacter = null; // Already expired or released.
+        status(error instanceof StormPTGatewayError && error.status === 409
+          ? "Reserva indisponível ou ocupada por outra sessão."
+          : "Não foi possível atualizar a reserva no LAB.", "error");
+      } finally {
+        updateReservationButtons();
+      }
+    });
+    reservationButtons.push({ name: character.name, button: action });
+    item.append(details, level, action);
     characterList.append(item);
   }
+  updateReservationButtons();
   accountTitle.textContent = "Conta: " + username;
   emptyList.hidden = characters.length !== 0;
   loginView.hidden = true;
